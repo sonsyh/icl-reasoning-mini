@@ -1,0 +1,51 @@
+{
+  "config_schema_version": 1,
+  "config_name": "day3_dev_v1",
+  "stage": "dev",
+  "conditions": ["C0", "C1", "C2"],
+  "api": {
+    "base_url": "https://api.deepseek.com",
+    "endpoint": "/chat/completions",
+    "model": "deepseek-v4-pro",
+    "thinking": {
+      "type": "disabled"
+    },
+    "temperature": 0,
+    "max_tokens": 1024,
+    "stream": false,
+    "response_format": {
+      "type": "text"
+    }
+  },
+  "runtime": {
+    "timeout_seconds": 120,
+    "concurrency": 1,
+    "transient_error_retries": 2,
+    "sdk_max_retries": 0
+  },
+  "demo_selection": {
+    "applies_to_conditions": ["C1", "C2"],
+    "method": "random_label_balanced",
+    "seed": 20261009,
+    "shots": 2,
+    "true_count": 1,
+    "false_count": 1,
+    "share_selection_between": ["C1", "C2"]
+  },
+  "data": {
+    "demo_path": "data/splits/seed20261007/demo.jsonl",
+    "eval_path": "data/splits/seed20261007/dev.jsonl",
+    "allow_test": false
+  },
+  "budget": {
+    "currency": "CNY",
+    "project_total_cap": 50
+  },
+  "credentials": {
+    "api_key_env": "DEEPSEEK_API_KEY"
+  },
+  "provenance": {
+    "docs_checked_date": "2026-10-08",
+    "provider_documented_version": "DeepSeek-V4-Pro-0813"
+  }
+}

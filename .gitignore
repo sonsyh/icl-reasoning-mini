@@ -1,0 +1,23 @@
+# Private/generated resources are not part of this public showcase.
+.env
+.env.*
+*.pem
+*.key
+*.p12
+__pycache__/
+*.py[cod]
+.DS_Store
+.cache/
+.venv/
+venv/
+external/
+data/
+runs/
+tmp/
+reproduction/
+*.log
+*.lock
+*.npy
+*.safetensors
+*.zip
+*.pdf

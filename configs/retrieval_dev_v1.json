@@ -1,0 +1,46 @@
+{
+  "config_schema_version": 1,
+  "config_name": "retrieval_dev_v1",
+  "stage": "dev",
+  "model": {
+    "repo_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "local_path": "external/minilm_l6_v2_1110a24",
+    "weight_sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+    "local_files_only": true,
+    "trust_remote_code": false,
+    "backend": "torch"
+  },
+  "input_text": {
+    "version": "retrieval_text_v1",
+    "fields": ["premises", "query"],
+    "template": "Premises:\n{premises_joined_by_newline}\n\nQuery:\n{query}",
+    "preserve_premise_order": true,
+    "max_seq_length": 256,
+    "overlength_policy": "error"
+  },
+  "encoding": {
+    "device": "cpu",
+    "torch_num_threads": 1,
+    "batch_size": 16,
+    "precision": "float32",
+    "normalize_embeddings": true,
+    "expected_dimension": 384
+  },
+  "data": {
+    "demo_path": "data/splits/seed20261007/demo.jsonl",
+    "eval_path": "data/splits/seed20261007/dev.jsonl",
+    "expected_demo_count": 120,
+    "expected_eval_count": 20,
+    "allow_test": false
+  },
+  "retrieval": {
+    "similarity": "cosine",
+    "shots": 2,
+    "label_order": ["True", "False"],
+    "per_label": 1,
+    "exclude_same_id": true,
+    "exclude_same_world": true,
+    "tie_break": "question_id_ascending"
+  }
+}

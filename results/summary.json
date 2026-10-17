@@ -1,0 +1,169 @@
+{
+  "plot_version": "day6_formal_test_plots_v1",
+  "run_id": "day5_test_live_v1_20261013",
+  "stage": "test",
+  "question_count": 60,
+  "response_count": 240,
+  "conditions": {
+    "C0": {
+      "n": 60,
+      "strict_correct": 48,
+      "lenient_correct": 48,
+      "strict_format_ok": 60,
+      "parse_ok": 60,
+      "strict_accuracy_percent": 80.0,
+      "lenient_accuracy_percent": 80.0
+    },
+    "C1": {
+      "n": 60,
+      "strict_correct": 53,
+      "lenient_correct": 53,
+      "strict_format_ok": 60,
+      "parse_ok": 60,
+      "strict_accuracy_percent": 88.33333333333333,
+      "lenient_accuracy_percent": 88.33333333333333
+    },
+    "C2": {
+      "n": 60,
+      "strict_correct": 60,
+      "lenient_correct": 60,
+      "strict_format_ok": 60,
+      "parse_ok": 60,
+      "strict_accuracy_percent": 100.0,
+      "lenient_accuracy_percent": 100.0
+    },
+    "C3": {
+      "n": 60,
+      "strict_correct": 60,
+      "lenient_correct": 60,
+      "strict_format_ok": 60,
+      "parse_ok": 60,
+      "strict_accuracy_percent": 100.0,
+      "lenient_accuracy_percent": 100.0
+    }
+  },
+  "depth": {
+    "2": {
+      "C0": {
+        "n": 20,
+        "strict_correct": 18,
+        "lenient_correct": 18,
+        "strict_format_ok": 20,
+        "parse_ok": 20,
+        "strict_accuracy_percent": 90.0,
+        "lenient_accuracy_percent": 90.0
+      },
+      "C1": {
+        "n": 20,
+        "strict_correct": 19,
+        "lenient_correct": 19,
+        "strict_format_ok": 20,
+        "parse_ok": 20,
+        "strict_accuracy_percent": 95.0,
+        "lenient_accuracy_percent": 95.0
+      },
+      "C2": {
+        "n": 20,
+        "strict_correct": 20,
+        "lenient_correct": 20,
+        "strict_format_ok": 20,
+        "parse_ok": 20,
+        "strict_accuracy_percent": 100.0,
+        "lenient_accuracy_percent": 100.0
+      },
+      "C3": {
+        "n": 20,
+        "strict_correct": 20,
+        "lenient_correct": 20,
+        "strict_format_ok": 20,
+        "parse_ok": 20,
+        "strict_accuracy_percent": 100.0,
+        "lenient_accuracy_percent": 100.0
+      }
+    },
+    "3": {
+      "C0": {
+        "n": 20,
+        "strict_correct": 17,
+        "lenient_correct": 17,
+        "strict_format_ok": 20,
+        "parse_ok": 20,
+        "strict_accuracy_percent": 85.0,
+        "lenient_accuracy_percent": 85.0
+      },
+      "C1": {
+        "n": 20,
+        "strict_correct": 17,
+        "lenient_correct": 17,
+        "strict_format_ok": 20,
+        "parse_ok": 20,
+        "strict_accuracy_percent": 85.0,
+        "lenient_accuracy_percent": 85.0
+      },
+      "C2": {
+        "n": 20,
+        "strict_correct": 20,
+        "lenient_correct": 20,
+        "strict_format_ok": 20,
+        "parse_ok": 20,
+        "strict_accuracy_percent": 100.0,
+        "lenient_accuracy_percent": 100.0
+      },
+      "C3": {
+        "n": 20,
+        "strict_correct": 20,
+        "lenient_correct": 20,
+        "strict_format_ok": 20,
+        "parse_ok": 20,
+        "strict_accuracy_percent": 100.0,
+        "lenient_accuracy_percent": 100.0
+      }
+    },
+    "4": {
+      "C0": {
+        "n": 20,
+        "strict_correct": 13,
+        "lenient_correct": 13,
+        "strict_format_ok": 20,
+        "parse_ok": 20,
+        "strict_accuracy_percent": 65.0,
+        "lenient_accuracy_percent": 65.0
+      },
+      "C1": {
+        "n": 20,
+        "strict_correct": 17,
+        "lenient_correct": 17,
+        "strict_format_ok": 20,
+        "parse_ok": 20,
+        "strict_accuracy_percent": 85.0,
+        "lenient_accuracy_percent": 85.0
+      },
+      "C2": {
+        "n": 20,
+        "strict_correct": 20,
+        "lenient_correct": 20,
+        "strict_format_ok": 20,
+        "parse_ok": 20,
+        "strict_accuracy_percent": 100.0,
+        "lenient_accuracy_percent": 100.0
+      },
+      "C3": {
+        "n": 20,
+        "strict_correct": 20,
+        "lenient_correct": 20,
+        "strict_format_ok": 20,
+        "parse_ok": 20,
+        "strict_accuracy_percent": 100.0,
+        "lenient_accuracy_percent": 100.0
+      }
+    }
+  },
+  "all_strict_lenient_equal": true,
+  "description": "Single frozen test run; descriptive accuracy only; no significance or internal-mechanism claim.",
+  "protected_file_count": 69,
+  "source_sha256": {
+    "acceptance": "572d45f9028a012598e2cdf0dcd02d0b1e7e4af13d5ad7b64c793a6844cfd45f",
+    "results": "e65681e63e326165e6c61fef55bb3e46be0907026ec6d8fd64959229d1f7d4e9",
+    "test": "ee97abe51219de5cae098789c78d3daeddcdea7c23a9dc7ce685d84ea9b20ad7"
+  }
+}

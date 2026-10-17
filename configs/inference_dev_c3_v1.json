@@ -1,0 +1,58 @@
+{
+  "config_schema_version": 1,
+  "config_name": "day4_dev_c3_v1",
+  "stage": "dev",
+  "conditions": ["C3"],
+  "api": {
+    "base_url": "https://api.deepseek.com",
+    "endpoint": "/chat/completions",
+    "model": "deepseek-v4-pro",
+    "thinking": {"type": "disabled"},
+    "temperature": 0,
+    "max_tokens": 1024,
+    "stream": false,
+    "response_format": {"type": "text"}
+  },
+  "runtime": {
+    "timeout_seconds": 120,
+    "concurrency": 1,
+    "transient_error_retries": 2,
+    "sdk_max_retries": 0
+  },
+  "demo_selection": {
+    "applies_to_conditions": ["C3"],
+    "method": "semantic_label_balanced_cosine_v1_float64",
+    "shots": 2,
+    "true_count": 1,
+    "false_count": 1,
+    "label_order": ["True", "False"],
+    "selection_cache_path": "data/retrieval/dev_semantic_minilm_v1",
+    "selection_manifest_hash": "332569ad86fc4ee0d496078aa5b4265c10434bd2545ca4fd9a497a73affe6a51"
+  },
+  "data": {
+    "demo_path": "data/splits/seed20261007/demo.jsonl",
+    "eval_path": "data/splits/seed20261007/dev.jsonl",
+    "allow_test": false
+  },
+  "prompt_cache": {
+    "path": "data/prompts/dev_c3_minilm_v1",
+    "manifest_hash": "c7bc07702456200c430918dd74ac2a8d235b27dc615e9328e974686645c8db00",
+    "expected_count": 20
+  },
+  "baseline": {
+    "config_path": "configs/inference_dev_v1.json",
+    "results_path": "runs/day3_dev_live_v1_20261008/results.jsonl",
+    "results_sha256": "99fdc1f78f7b769b1b82b743df799ced61e075109f810209b3336fde44fd9ba5"
+  },
+  "budget": {
+    "currency": "CNY",
+    "project_total_cap": 100
+  },
+  "credentials": {
+    "api_key_env": "DEEPSEEK_API_KEY"
+  },
+  "provenance": {
+    "baseline_condition": "C2",
+    "comparison": "semantic_vs_random_demo_selection"
+  }
+}

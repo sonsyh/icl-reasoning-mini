@@ -1,0 +1,85 @@
+{
+  "config_schema_version": 1,
+  "config_name": "day5_test_v1",
+  "stage": "test",
+  "conditions": ["C0", "C1", "C2", "C3"],
+  "api": {
+    "base_url": "https://api.deepseek.com",
+    "endpoint": "/chat/completions",
+    "model": "deepseek-v4-pro",
+    "thinking": {"type": "disabled"},
+    "temperature": 0,
+    "max_tokens": 1024,
+    "stream": false,
+    "response_format": {"type": "text"}
+  },
+  "runtime": {
+    "timeout_seconds": 120,
+    "concurrency": 1,
+    "transient_error_retries": 2,
+    "sdk_max_retries": 0
+  },
+  "retry_policy": {
+    "automatic_retry_error_kinds": ["rate_limit"],
+    "retry_content_errors": false,
+    "stop_on_uncertain_outcome": true
+  },
+  "demo_selection": {
+    "shots": 2,
+    "true_count": 1,
+    "false_count": 1,
+    "label_order": ["True", "False"],
+    "random": {
+      "applies_to_conditions": ["C1", "C2"],
+      "method": "random_label_balanced",
+      "seed": 20261009,
+      "share_selection_between": ["C1", "C2"]
+    },
+    "semantic": {
+      "applies_to_conditions": ["C3"],
+      "method": "semantic_label_balanced_cosine_v1_float64",
+      "reference_config_path": "configs/retrieval_dev_v1.json",
+      "reference_config_sha256": "089871387efb6f1cc77b2f223c372db592cd284acd840238e4ddb4d50129630a",
+      "inherit_sections": ["model", "input_text", "encoding", "retrieval"],
+      "demo_embedding_cache_path": "data/embeddings/minilm_l6_v2_1110a24_retrieval_text_v1",
+      "demo_embedding_manifest_hash": "58d1b554b0341056ef10d386d13276e10b6467e8b57db657d5ec2675d99fc620"
+    }
+  },
+  "data": {
+    "demo_path": "data/splits/seed20261007/demo.jsonl",
+    "eval_path": "data/splits/seed20261007/test.jsonl",
+    "freeze_record_path": "data/splits/seed20261007/freeze_record.json",
+    "expected_demo_count": 120,
+    "expected_eval_count": 60,
+    "allow_test": true,
+    "expected_test_sha256": "ee97abe51219de5cae098789c78d3daeddcdea7c23a9dc7ce685d84ea9b20ad7"
+  },
+  "evaluation": {
+    "planned_responses": 240,
+    "primary_comparison": ["C3", "C2"],
+    "parser_version": "answer_parser_v1",
+    "target_input_fields": ["id", "world_fingerprint", "premises", "query"],
+    "gold_label_use": "local_scoring_only",
+    "depth_use": "post_run_grouping_only",
+    "target_gold_cot_use": "forbidden_in_generation_and_selection"
+  },
+  "run_control": {
+    "default_mode": "dry_run",
+    "explicit_live_required": true,
+    "default_max_new_requests": 1,
+    "separate_test_run_directory": true
+  },
+  "budget": {
+    "currency": "CNY",
+    "project_total_cap": 100
+  },
+  "credentials": {
+    "api_key_env": "DEEPSEEK_API_KEY"
+  },
+  "provenance": {
+    "baseline_inference_config_path": "configs/inference_dev_v1.json",
+    "baseline_inference_config_sha256": "9d237ee9e28db4af597033a17e300d2efa66ef882804a294ae9fc8cb796d5bf7",
+    "day4_acceptance_path": "../markdown/Day4_Acceptance_2026-10-13.json",
+    "day4_acceptance_sha256": "d24c0f3f2abdbfefb86cc7795484e233197f497921fad406b36c98780df0b270"
+  }
+}

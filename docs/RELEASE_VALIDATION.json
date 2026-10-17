@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-17",
+  "status": "PASS",
+  "public_file_count": 50,
+  "scanned_bytes": null,
+  "scope": "all final release text/SVG plus PNG metadata; not a guarantee against every possible secret",
+  "pattern_matches": [],
+  "links_valid": true,
+  "no_symlinks": true,
+  "private_historical_files_unchanged": 86,
+  "public_tests": {
+    "run": 128,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "network_disabled": true
+  },
+  "license": "no open-source license granted for original code",
+  "omissions": [
+    "raw question datasets",
+    "raw API response logs",
+    "original acceptance bundles",
+    "personal handoff/application documents",
+    "third-party checkouts",
+    "model weights",
+    "download caches",
+    "PDFs"
+  ],
+  "original_private_sources_modified": false,
+  "pruning": {
+    "removed_private_artifact_test_files": 11,
+    "removed_obsolete_source_snapshots": 1,
+    "removed_outdated_pricing_snapshots": 1,
+    "retained_core_test_files": 8,
+    "validator_test_scope": "LogicTests and SchemaTests only"
+  }
+}
