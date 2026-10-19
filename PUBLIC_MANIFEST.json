@@ -5,7 +5,7 @@
   "self_hash_included": false,
   "files_sha256": {
     ".gitignore": "1bba6c547b53ad18996ee6ba35bdde3ef813e584b86319394557972d05b8fe9e",
-    "README.md": "e52b5cd81539b07149736a1123c89b6fa37c712b741f27a7bd9e02d4ea5a0859",
+    "README.md": "33c723a86e3634af477e2b29d7d1f8fd6ca4c9148798d7689f432bae40dbc646",
     "RIGHTS.md": "81d91c91ec9c6f09ebb129a7c101118980de398275d57ecb2311ae3eb5abcb39",
     "THIRD_PARTY_NOTICES.md": "14701722b724b75ec612b158d4f03a857fbbb430baf37cf0625f7809f8c35f54",
     "configs/inference_dev_c3_v1.json": "7ab555e5b378a7efd62d188c0a70f79079eee5317b04454b2ac75fa3d5ccca89",
