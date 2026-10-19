@@ -21,8 +21,6 @@ The primary comparison is **C3 versus C2**: zero observed accuracy gain, with bo
 
 ## Beyond accuracy: posthoc C2/C3 derivation minimality
 
-A posthoc, nonblind audit on 19 October 2026 examined all 60 paired C2/C3 responses (120 existing outputs), without new model calls or changes to the formal accuracy scores. Shortest proof depth was recomputed from all premises using a restricted unary-rule forward-chaining checker, rather than inferred from output line counts. Target gold labels and reference chains were used only in this after-the-run audit, not for selection or generation.
-
 Two exploratory definitions distinguish shortest reasoning from merely shorter text:
 
 - **New-fact minimality:** all core statements are supported, the number of distinct newly derived individual facts (excluding the initial fact and restatements) equals the shortest proof depth, and the displayed content contains a shortest valid proof.
